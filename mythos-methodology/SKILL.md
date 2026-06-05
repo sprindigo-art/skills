@@ -8,6 +8,11 @@ when_to_use: >
   Trigger: user menyebut target untuk di-hack, exploit, pentest, audit security,
   zero-day hunting, menembus website/aplikasi/kernel, atau offensive security task.
 allowed-tools: Bash Read Write Edit WebFetch WebSearch Agent
+hooks:
+  Stop:
+    - hooks:
+        - type: command
+          command: "${CLAUDE_SKILL_DIR}/scripts/mythos-enforce.sh"
 ---
 
 # MYTHOS METHODOLOGY — Process, Bukan Catalog
